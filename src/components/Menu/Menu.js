@@ -1,16 +1,16 @@
 import React from "react";
-import StyledMenu from "./Menu.styled";
+import { StyledMenu, Link } from "./Menu.styled";
 import { bool } from "prop-types";
 
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href='/'>home</a>
-      <a href='/'>about</a>
-      <a href='/'>gallery</a>
-      <a href='/'>guestbook</a>
-      <a href='/'>blog</a>
-      <a href='/'>contact us</a>
+      <Link href='/'>home</Link>
+      <Link href='/'>about</Link>
+      <Link href='/'>gallery</Link>
+      <Link href='/'>guestbook</Link>
+      <Link href='/'>blog</Link>
+      <Link href='/'>contact us</Link>
     </StyledMenu>
   );
 };

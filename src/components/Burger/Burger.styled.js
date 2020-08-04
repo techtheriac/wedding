@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import theme from "../../themes";
 
 const StyledBurger = styled.button`
   position: absolute;
-  top: 5%;
+  top: 2%;
   right: 2rem;
   display: flex;
   flex-direction: column;
@@ -23,11 +22,15 @@ const StyledBurger = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${theme.primaryDark};
+    background: black;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+
+    @media (min-width: 860px) {
+      display: none;
+    }
   }
 `;
 

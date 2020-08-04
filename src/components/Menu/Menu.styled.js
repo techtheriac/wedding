@@ -1,10 +1,29 @@
 import styled from "styled-components";
 
+const Link = styled.a`
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: wheat;
+  text-decoration: none;
+  transition: color 0.3s linear;
+
+  @media (max-width: "576px") {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  &:hover {
+    color: "#343078";
+  }
+`;
+
 const StyledMenu = styled.nav`
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  background: black;
+  background: #33391b;
   height: 100vh;
   text-align: left;
   padding: 2rem;
@@ -12,32 +31,12 @@ const StyledMenu = styled.nav`
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
-  /* transform: translateX(100%); */
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  display: ${({ open }) => (open ? "flex" : "none")};
 
   @media (max-width: "576px") {
     width: 100%;
   }
-
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: "#0D0C1D";
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    @media (max-width: "576px") {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    &:hover {
-      color: "#343078";
-    }
-  }
 `;
 
-export default StyledMenu;
+export { StyledMenu, Link };

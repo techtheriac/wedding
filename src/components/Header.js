@@ -5,12 +5,19 @@ import HeaderIcon from "../../assets/logo-67x30.png";
 const Navigation = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 868px) {
+    display: none;
+  }
 `;
 
 const Link = styled.a`
+  color: #666666;
   text-decoration: none;
   text-transform: uppercase;
   padding-left: 1.7em;
+  padding-top: 1em;
+  font-size: 12px;
   cursor: pointer;
 `;
 
