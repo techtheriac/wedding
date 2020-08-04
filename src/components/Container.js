@@ -6,7 +6,7 @@ import backgroundMobile from "../../assets/bg-mobile.png";
 const Container = createGlobalStyle`
   ${normalize}
   html {
-    font-size: calc(0.3em + 1vw);
+    font-size: calc(0.5em + 1vw);
     box-sizing: border-box;
   }
 

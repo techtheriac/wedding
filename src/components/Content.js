@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import DateIcon from "../../assets/hero_20x20.png";
+import FlowerImage from "../../assets/hero_shape.png";
 
 const ContentWrapper = styled.div`
   margin-top: 10em;
@@ -15,21 +16,30 @@ const Date = styled.div`
 const CoupleName = styled.h1`
   font-family: "PlayFair Display";
   color: white;
+
+  > i {
+    font-size: 0.7em;
+  }
 `;
 
 const ContentText = styled.p`
   color: white;
 `;
 
+const Flower = styled.img`
+  transform: rotate(15deg) translate(-22px, -6px);
+`;
+
 const Content = () => {
   return (
     <ContentWrapper>
       <Date>
-        <img src={DateIcon} width='20px' height='20px' />
+        <img src={DateIcon} width='27px' height='27px' />
         <ContentText>January 23</ContentText>
       </Date>
       <CoupleName>
         Dennis <i>&</i> Judith
+        <Flower src={FlowerImage} />
       </CoupleName>
       <ContentText>Will get married</ContentText>
     </ContentWrapper>
