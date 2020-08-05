@@ -27,14 +27,20 @@ const ContentText = styled.p`
 `;
 
 const Flower = styled.img`
-  transform: rotate(15deg) translate(-22px, -6px);
+  transform: rotate(15deg) translate(-9px, -1px);
+  z-index: -12;
 `;
 
+const DateIconImage = styled.img`
+  @media (min-width: 850px) {
+    transform: translate(-4px, 16px);
+  }
+`;
 const Content = () => {
   return (
     <ContentWrapper>
       <Date>
-        <img src={DateIcon} width='27px' height='27px' />
+        <DateIconImage src={DateIcon} width='27px' height='27px' />
         <ContentText>January 23</ContentText>
       </Date>
       <CoupleName>
