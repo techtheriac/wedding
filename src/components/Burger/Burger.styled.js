@@ -14,6 +14,11 @@ const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  display: none;
+
+  @media (max-width: 868px) {
+    display: flex;
+  }
 
   &:focus {
     outline: none;
@@ -27,10 +32,6 @@ const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-
-    @media (min-width: 860px) {
-      display: none;
-    }
   }
 `;
 

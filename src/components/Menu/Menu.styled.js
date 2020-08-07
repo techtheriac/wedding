@@ -34,6 +34,7 @@ const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   display: ${({ open }) => (open ? "flex" : "none")};
   z-index: 1;
+  overflow: hidden;
 
   @media (max-width: "576px") {
     width: 100%;
